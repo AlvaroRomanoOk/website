@@ -68,7 +68,6 @@ nav ul li {
     background-color: #FFFFFF;
     display: block;
     text-align: center;
-    height: 250px;
     width: 100%;
 }
 
@@ -76,24 +75,8 @@ nav ul li {
     background-color: #000000;
     display: block;
     text-align: center;
-    height: 250px;
     width: 100%;
-}
-
-.conocimientos {
-    background-color: #FFFFFF;
-    display: block;
-    text-align: center;
-    height: 250px;
-    width: 100%;
-}
-
-.proyectos {
-    background-color: #000000;
-    display: block;
-    text-align: center;
-    height: 250px;
-    width: 100%;
+    height: 1000px;
 }
 
 .contacto {
@@ -102,13 +85,31 @@ nav ul li {
     text-align: center;
     height: 250px;
     width: 100%;
+    color: #000000;
 }
 
-h2 {
+.h2n {
     color: #000000;
     font-family: 'Kanit', sans-serif;
     font-size: 38px;
-    margin-top: 2%;
+}
+
+.h2b {
+    color: #FFFFFF;
+    font-family: 'Kanit', sans-serif;
+    font-size: 38px;
+}
+
+.h3n {
+    color: #000000;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
+}
+
+.h3b {
+    color: #FFFFFF;
+    font-family: 'Kanit', sans-serif;
+    font-size: 32px;
 }
 
 #soy {
