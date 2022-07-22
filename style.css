@@ -150,3 +150,9 @@ footer {
     font-size: 100%;
     line-height: 25px;
 }
+
+/* Formulario */
+
+#trucazo {
+    opacity: 0;
+}
