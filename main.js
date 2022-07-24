@@ -1,3 +1,11 @@
+// Ocultar enlaces # de las URL
+
+window.onhashchange = function () {
+window.history.pushState('', document.title, window.location.pathname)
+}
+
+// Script del formulario de contacto
+
 const $form = document.querySelector('#form')
 const $buttonMailto = document.querySelector('#sendto')
         
