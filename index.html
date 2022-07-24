@@ -28,11 +28,16 @@
         
         <div id="container">
 
+
+            <!-- Cabecera de la página -->
+
             <header>
 
                 <a href="index.html"><h1>ALVARO ROMANO</h1></a>
 
             </header>
+
+            <!-- Barra de navegación de la página -->
 
             <nav>
 
@@ -46,10 +51,14 @@
 
             </nav>
 
+            <!-- Este div sirve para solucionar un "error" de colocación de los elementos -->
             <div class="clearfix"></div>
+
+            <!-- En esta etiqueta se guardan todas las secciones principales de la página -->
 
             <section id="content">
 
+                <!-- Aquí se guardan los contenidos de la sección "Quien Soy" -->
                 <link name="quienSoy">
                 <article id="quienSoy">
 
@@ -61,6 +70,7 @@
                         
                 </article>
 
+                <!-- Aquí se guardan los contenidos de la sección "Servicios"-->
                 <link name="servicios">
                 <article id="servicios">
 
@@ -108,6 +118,7 @@
 
                 </article>
 
+                <!-- Aquí se guardan los contenidos de la sección "Conocimientos"-->
                 <link name="conocimientos">
                 <article id="conocimientos">
 
@@ -155,6 +166,8 @@
                         <img class="imginf" src="img/gh.svg" alt="Github">
                     </div>
 
+                    <p class="pn"><strong>En el año 2021 comencé mis estudios en desarrollo web, adquiriendo un conocimiento y técnica avanzada en HTML 5, además de tener los conocimientos medios de CSS y algún que otro conocimiento básico en JavaScript, siendo capaz de aplicar estas tres tecnologías en entornos de desarrollo como lo son Sublime Text o Visual Studio Code, entre otros.<br><br>De esta manera soy capaz de crear páginas webs sencillas para cualquier ámbito. Además de tener un manejo bastante completo de Github y de las API de Github.<br><br>Estos conocimientos los he adquirido por mi cuenta, en tutoriales de internet, cursos en línea, dentro de comunidades con lazos con el desarrollo web, manuales y claro, con mi propia experiencia en estos meses de estudios.</strong></p>
+
                     <p style="opacity: 0; font-size: 10px; margin: 0px;">x</p>
 
                 </article>
@@ -182,7 +195,6 @@
                     </div>
 
                 </div>
-                <!-- //Formulario de contacto// -->
 
                 </article>
 
@@ -190,10 +202,24 @@
 
         </div>
 
+        <!-- Pie de la página -->
+
         <footer>
             Alvaro Romano &copy; 2006-2022
         </footer>
 
+        <!-- Scripts JS -->
+
+        <!-- Ocultar los enlaces # de la URL -->
+        <script>
+
+            window.onhashchange = function () {
+            window.history.pushState('', document.title, window.location.pathname)
+            }
+
+        </script>
+        
+        <!-- Script del formulario de contacto -->
         <script>
 
             const $form = document.querySelector('#form')
@@ -209,6 +235,8 @@
                     }
 
         </script>
+
+        <!-- // Scripts JS // -->
 
     </body>
 
