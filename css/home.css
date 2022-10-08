@@ -1,0 +1,204 @@
+#inicio {
+    display: flex;
+    min-height: 565px;
+    align-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+}
+
+#particles-js {
+    height: 557px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    opacity: .85;
+}
+
+.cont1 {
+    text-align: center;
+    width: 50%;
+}
+
+.saludo {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 40px;
+    color: crimson;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hola {
+    height: 40px;
+}
+
+.soy {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.meAnimation {
+    margin: auto;
+    width: 500px;
+    height:35px;
+    font-size: 35px;
+    line-height: 40px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+    
+.meAnimation ul {
+    list-style: none;
+    animation: cambiar 9s infinite;
+}
+    
+.meAnimation ul, p {
+    font-weight: bold;
+    color: blue;
+    margin: 0;
+}
+ 
+ @keyframes  cambiar {
+  
+    0%{ margin-top: 0;}
+    8.18%{ margin-top: 0;}
+   
+    16.36%{ margin-top: -40PX;}
+    24.54%{ margin-top: -40PX;}
+   
+    32.72%{ margin-top: -80PX;}
+    40.9%{ margin-top: -80PX;}   
+
+    49.8%{ margin-top: -120PX;}
+    57.26%{ margin-top: -120PX;}
+   
+    65.44%{ margin-top: -80PX;}
+    73.62%{ margin-top: -80PX;}
+
+    81.8%{ margin-top: -40PX;}
+    89.98%{ margin-top: -40PX;}
+
+    100%{ margin-top: 0;}
+  
+}
+
+.redes-container {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.redes-container ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.redes-container ul li a {
+    display: block;
+    padding: 0 10px;
+    background: #000000;
+    color: #FFFFFF;
+    line-height: 50px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgba(0 0 0 .2);
+    transition: .2s;
+}
+
+.redes-container ul li a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .4);
+    filter: none;
+}
+
+.redes-container ul li .youtube:hover{
+    background-color: #bb0000
+}
+
+.redes-container ul li .twitter:hover{
+    background-color: #55acee;
+}
+
+.redes-container ul li .instagram:hover{
+    background-color: #e4405f;
+}
+
+.redes-container ul li .facebook:hover{
+    background-color: #3b5998
+}
+
+.redes-container ul li .linkedin:hover{
+    background-color: #007785
+}
+
+.redes-container ul li .github:hover{
+    background-color: #333333
+}
+
+.foto1 {
+    text-align: center;
+    width: 50%;
+}
+
+.foto1 img {
+    width: 360px;
+    border-radius: 50%;
+}
+
+@media (max-width:1190px){
+
+    #inicio {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .foto1 {
+        visibility: hidden;
+        display: none;
+    }
+
+    .cont1 {
+        width: auto;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .saludo {
+        font-size: 30px;
+    }
+
+    .soy {
+        font-size: 30px;
+    }
+
+    .meAnimation {
+        font-size: 25px;
+    }
+
+    .redes-container ul li {
+        margin: 0 5px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .redes-container ul li a {
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+        line-height: 30px;
+    }
+
+}

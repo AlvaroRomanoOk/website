@@ -1,10 +1,6 @@
 header {
     display: flex;
-    /*position: fixed;*/
-    height: 70px;
-    /*width: 100%;*/
-    padding-left: 4%;
-    padding-right: 4%;
+    min-height: 70px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -12,37 +8,20 @@ header {
     background: #000;
 }
 
-header nav {
-    word-spacing: 10px;
-}
-
-header a {
-    word-spacing: 0;
-}
-
-header nav a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #FFF;
-}
-
-header nav a {
-    text-decoration: none;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s;
-}
-
-header nav a:hover, a:focus {
-    background-size: 100% 2px;
-    color: crimson;
-}
-
 header h1 {
     font-family: 'Kanit', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
     letter-spacing: 5px;
     color: #FFF;
+}
+
+@media (max-width:420px){
+
+    header {
+        line-height: normal;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
 }
