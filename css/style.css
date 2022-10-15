@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .disable-select {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -13,46 +17,6 @@
     user-select: none;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-ul {
-    list-style-type: none;
-}
-
 a {
     text-decoration: none;
-}
-
-.h2b {
-    font-family: 'Roboto', sans-serif;
-    color: #FFF;
-}
-
-.h2n {
-    font-family: 'Roboto', sans-serif;
-    color: #000;
-}
-
-.h3b {
-    font-family: 'Roboto', sans-serif;
-    color: #FFF;
-}
-
-.h3n {
-    font-family: 'Roboto', sans-serif;
-    color: #000;
-}
-
-.pb {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: #FFF;
-}
-
-.pn {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: #000;
 }

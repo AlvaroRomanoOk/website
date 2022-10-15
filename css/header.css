@@ -1,27 +1,137 @@
 header {
     display: flex;
-    min-height: 70px;
+    min-height: 60px;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 70px;
-    background: #000;
+    justify-content: space-between;
+    line-height: 60px;
+    position: sticky;
+    padding-left: 6%;
+    padding-right: 6%;
+    top: 0;
+    background-color: #000;
 }
 
-header h1 {
-    font-family: 'Kanit', sans-serif;
+header h1 a {
+    font-family: 'Russo One', sans-serif;
     font-size: 32px;
-    letter-spacing: 5px;
     color: #FFF;
+    letter-spacing: 3px;
+    filter: brightness(95%);
+}
+
+header h1 a:hover {
+    transition: .3s;
+    color: rgb(235, 232, 39);
+}
+
+header nav {
+    word-spacing: 10px;
+}
+
+header nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #FFF;
+    word-spacing: 0px;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+header nav a:hover, a:focus {
+    background-size: 100% 2px;
+    color: rgb(235, 232, 39);
+    transition: .3s;
+}
+
+@media (max-width:920px){
+    header {
+        flex-direction: column;
+    }
+
+    header h1 {
+        padding-top: 10px;
+    }
+
+    header nav {
+        padding-bottom: 3px;
+    }
+}
+
+@media (max-width:500px){
+    header h1 {
+        font-size: 24px;
+    }
+
+    header h1 a {
+        font-size: 24px;
+    }
+    
+    header nav {
+        font-size: 14px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
 }
 
 @media (max-width:420px){
 
-    header {
-        line-height: normal;
+    header h1 {
+        font-size: 20px;
     }
 
+    header h1 a {
+        font-size: 20px;
+    }
+    
+    header nav {
+        font-size: 12px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:365px){
+
     header h1 {
-        font-size: 22px;
+        font-size: 18px;
+    }
+
+    header h1 a {
+        font-size: 18px;
+    }
+    
+    header nav {
+        font-size: 10px;
+    }
+
+    header nav a {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:310px){
+
+    header h1 {
+        font-size: 16px;
+    }
+
+    header h1 a {
+        font-size: 16px;
+    }
+    
+    header nav {
+        font-size: 8px;
+    }
+
+    header nav a {
+        font-size: 8px;
     }
 }
