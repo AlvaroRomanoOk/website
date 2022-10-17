@@ -1,0 +1,57 @@
+#portfolio {
+    display: grid;
+    min-height: 100vh;
+    padding-bottom: 40px;
+    background-color: #F2F2F2;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#portfolio h2 {
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    padding-top: 40px;
+}
+
+#mi-portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.obra {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+}
+
+#portfolio img {
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    cursor: pointer;
+}
+
+#portfolio h3 {
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#portfolio a {
+    color: #000;
+}
+
+#portfolio a:hover {
+    color: #0000ff;
+}

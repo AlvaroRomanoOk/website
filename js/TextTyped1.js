@@ -2,7 +2,7 @@ const typed = new Typed('.typed1', {
     strings: [
         '<i class="saludo" >INFORMÁTICO</i>',
         '<i class="saludo" >EDITOR AUDIOVISUAL</i>',
-        '<i class="saludo" >DESAROLLADOR WEB</i>',
+        '<i class="saludo" >DESAROLLADOR</i>',
         '<i class="saludo" >INFORMÁTICO FORENSE</i>'
     ],
 

@@ -2,13 +2,14 @@ header {
     display: flex;
     min-height: 60px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     line-height: 60px;
-    position: sticky;
+    /*position: sticky;*/
     padding-left: 6%;
     padding-right: 6%;
-    top: 0;
-    background-color: #000;
+    /*top: 0;*/
+    background-color: #252525;
+    /*box-shadow: 0 2px 6px gray;*/
 }
 
 header h1 a {
@@ -22,6 +23,29 @@ header h1 a {
 header h1 a:hover {
     transition: .3s;
     color: rgb(235, 232, 39);
+}
+
+header nav {
+    word-spacing: 10px;
+}
+
+header nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #FFF;
+    word-spacing: 0px;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+header nav a:hover, a:focus {
+    background-size: 100% 2px;
+    color: rgb(235, 232, 39);
+    transition: .3s;
 }
 
 @media (max-width:920px){
