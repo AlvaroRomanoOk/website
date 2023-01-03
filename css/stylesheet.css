@@ -109,7 +109,8 @@ header h1 a {
     width: 180px;
     border-radius: 50%;
     position: absolute;
-    opacity: .40;
+    z-index: 1;
+    opacity: .50;
 }
 
 #inicio_div {
@@ -118,6 +119,7 @@ header h1 a {
     justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
+    z-index: 2;
 }
 
 #inicio_div h2 {
