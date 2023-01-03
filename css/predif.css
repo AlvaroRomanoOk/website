@@ -1,0 +1,12 @@
+:root {
+    --h1-font: 'Russo One', sans-serif;
+    --h2-font: 'Secular One', sans-serif;
+    --h3-font: 'Secular One', sans-serif;
+    --p-font: 'Roboto', sans-serif;
+    --nav-font: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F2F2F2;
+    overflow-x: hidden;
+}
