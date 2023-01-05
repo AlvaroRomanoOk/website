@@ -21,5 +21,3 @@ Sistema de la plantilla
 
 * Basada en HTML
 * La pagina se aloja en master como index.html
-
-=================
