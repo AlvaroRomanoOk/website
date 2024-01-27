@@ -29,25 +29,25 @@ body {
 
     h1 {
         font-family: 'Honk', system-ui;
-        font-size: 76px;
+        font-size: 78px;
     }
 
     h2 {
         font-family: 'Sixtyfour', sans-serif;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 20px;
+        line-height: 24px;
         padding-bottom: 14px;
     }
 
     p {
         font-family: sans-serif;
-        font-size: 16px;
+        font-size: 18px;
         padding-bottom: 14px;
     }
 
     button {
         padding: 8px 16px;
-        font-size: 14px;
+        font-size: 16px;
         cursor: pointer;
         background-color: #F2F2F2;
         color: #252525;
