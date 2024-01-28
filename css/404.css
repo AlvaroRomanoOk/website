@@ -66,7 +66,7 @@ body {
 
 /* DISEÑO 2 */
 
-@media screen and (max-width:841px) and (min-width: 600px){
+@media screen and (max-width:840px) and (min-width: 600px){
     .img {
         display: none;
     }
