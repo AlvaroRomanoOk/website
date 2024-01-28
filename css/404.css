@@ -10,7 +10,9 @@ body {
     background-color: #252525;
 }
 
-@media screen and (max-width:425px){
+/* DISEÑO 1 */
+
+@media screen and (max-width:599px){
     .img {
         display: none;
     }
@@ -48,6 +50,61 @@ body {
     button {
         padding: 8px 16px;
         font-size: 16px;
+        cursor: pointer;
+        background-color: #F2F2F2;
+        color: #252525;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+    background-color: #2980b9;
+    }
+
+}
+
+/* DISEÑO 2 */
+
+@media screen and (max-width:840px) and (min-width: 600px){
+    .img {
+        display: none;
+    }
+
+    .content {
+        position: absolute;
+        width: 100%;
+        padding-left: 6%;
+        padding-right: 6%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+        color: #FFFFFF;
+    }
+
+    h1 {
+        font-family: 'Honk', system-ui;
+        font-size: 90px;
+    }
+
+    h2 {
+        font-family: 'Sixtyfour', sans-serif;
+        font-size: 24px;
+        line-height: 30px;
+        padding-bottom: 16px;
+    }
+
+    p {
+        font-family: sans-serif;
+        font-size: 20px;
+        padding-bottom: 16px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: 600;
         cursor: pointer;
         background-color: #F2F2F2;
         color: #252525;
