@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-color: #F2F2F2;
+}
+
+/* DISEÑO 1 320px- */
+
+@media screen and (max-width:3200px){
+    header {
+        display: flex;
+        flex-direction: column;
+        background-color: #252525;
+        height: 70px;
+        position: relative;
+    }
+
+    #header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        height: 100%;
+    }
+
+    #header-container h1 {
+        font-family: 'Righteous', sans-serif;
+        font-size: 24px;
+    }
+
+    #header-container h1 a {
+        color: #FFFFFF;
+    }
+
+    .menu {
+        background: none;
+    }
+
+    .menu .menu_icon {
+        background: none;
+        color: #FFFFFF;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .nav.active {
+        display: flex;
+        position: absolute;
+        height: calc(100vh - 70px);
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #252525;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav.active ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav.active li {
+        text-transform: uppercase;
+        font-family: 'Roboto', sans-serif;
+        padding: 2em;
+        font-size: 18px;
+    }
+
+    .nav.active li:active {
+        background-color: #000000;
+    }
+
+    .nav.active li a {
+        list-style-type: none;
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+}
