@@ -61,7 +61,7 @@ body {
 
 /* DISEÑO 2 */
 
-@media screen and (max-width:840px) and (min-width: 600px){
+@media screen and (max-width:840px) and (min-width:600px){
     .content {
         position: absolute;
         width: 100%;
