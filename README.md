@@ -51,4 +51,5 @@ Para manipular este proyecto en tu máquina local debes:
 
 > [!CAUTION]
 > Estás ante una versión beta, por lo que contiene funciones de la web que, están incompletas, deben ser complementadas y/o aplicarles cambios en la estructura general, o simplemente contiene funciones en estado de prueba que no modifican la experiencia del usuario, pero si del serivdor. Entre otras diversas cuestiones.
-> No te aseguro que este proyecto esté completo para su uso, puede tener carencias mínimas o el repositorio completamente vacío.
+>
+>  No te aseguro que este proyecto esté completo para su uso, puede tener carencias mínimas o el repositorio completamente vacío.
