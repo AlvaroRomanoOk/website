@@ -1,5 +1,7 @@
-document.querySelectorAll('.cliqueable').forEach(li => {
-    li.addEventListener('click', function() {
+// li -> Button
+
+document.querySelectorAll('.cliqueable').forEach(element => {
+    element.addEventListener('click', function() {
         const url = this.getAttribute('data-url');
         if (url) {
             window.location.href = url;
@@ -7,7 +9,7 @@ document.querySelectorAll('.cliqueable').forEach(li => {
     });
 
     // Soporte para teclado
-    li.addEventListener('keypress', function (event) {
+    element.addEventListener('keypress', function (event) {
     if (event.key === 'Enter') {
       const url = this.getAttribute('data-url');
       if (url) {
@@ -17,4 +19,3 @@ document.querySelectorAll('.cliqueable').forEach(li => {
   });
   
 });
-
