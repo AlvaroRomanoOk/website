@@ -1,5 +1,9 @@
 /* AJUSTES GENERALES */
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     outline: 0;
@@ -19,7 +23,7 @@ body {
 }
 
 .disable_click {
-    /*user-select: none;*/
+    user-select: none;
 }
 
 /* AJUSTES PREDETERMINADOS (1366x768 px) */
