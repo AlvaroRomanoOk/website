@@ -19,7 +19,7 @@ body {
 }
 
 .disable_click {
-    user-select: none;
+    /*user-select: none;*/
 }
 
 /* AJUSTES PREDETERMINADOS (1366x768 px) */
@@ -27,12 +27,18 @@ body {
     /* SECCIÓN HEADER */
 
 header {
+    opacity: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     position: fixed;
+    visibility: hidden;
     align-items: center;
     justify-content: center;
+    background-color: #F2F2F2;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
+
 }
 
 ul {
@@ -42,7 +48,7 @@ ul {
 header ul li {
     font-size: 20px;
     font-weight: 300;
-    margin-top: 14px;
+    margin-top: 22px;
     margin-left: 14px;
     position: relative;
     margin-right: 12px;
@@ -67,7 +73,7 @@ header ul li:hover::after {
     width: 100%;
 }
 
-    /* SECCIÓN HOME */
+    /* SECCIÓN INICIO */
 
 #content {
     display: flex;
@@ -116,4 +122,26 @@ header ul li:hover::after {
 
 #down_button i {
     font-size: 30px;
+}
+
+    /* SECCIÓN CONTACTO */
+
+#contacto {
+    display: flex;
+    background-color: #252525;
+    height: 100vh;
+    color: #F2F2F2;
+}
+
+header.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+  
+header:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s;
 }
