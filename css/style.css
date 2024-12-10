@@ -131,10 +131,9 @@ header ul li:hover::after {
     /* SECCIÓN CONTACTO */
 
 #contacto {
+    height: 100vh;
     display: flex;
     background-color: #252525;
-    height: 100vh;
-    color: #F2F2F2;
 }
 
 header.hidden {
