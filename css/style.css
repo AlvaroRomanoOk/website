@@ -132,7 +132,7 @@ header ul li:hover::after {
 #contacto {
     height: 100vh;
     display: flex;
-    background-color: #252525;
+    /*background-color: #252525;*/
 }
 
 header.hidden {
