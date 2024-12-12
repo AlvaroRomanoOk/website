@@ -222,3 +222,42 @@ header:not(.hidden) {
     color: #FFFFFF;
     background-color: #000000;
 }
+
+#contact_button {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: right;
+    width: 88vw;
+}
+
+#up_button {
+    bottom: 4%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background-color: #F2F2F2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#up_button:hover {
+    transform: translateY(-5px);
+    background-color: #FFFFFF;
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+
+}
+
+#up_button:active {
+    transform: translateY(-2px) scale(0.95);
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.15);
+}
+
+#up_button i {
+    font-size: 30px;
+}
