@@ -12,6 +12,7 @@ html {
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
 }
 
 body {
@@ -132,7 +133,18 @@ header ul li:hover::after {
 #contacto {
     height: 100vh;
     display: flex;
-    /*background-color: #252525;*/
+    flex-direction: column;
+    background-color: #252525;
+    align-items: center;
+    justify-content: center;
+}
+
+#contacto p {
+    color: #FFFFFF;
+}
+
+#contacto label {
+    color: #FFFFFF;
 }
 
 header.hidden {
@@ -146,4 +158,29 @@ header:not(.hidden) {
     visibility: visible;
     transform: translateY(0);
     transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s;
+}
+
+#section_title {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+#contact_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    background-color: red;
+}
+
+.contacto_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto_text label {
+    display: flex;
+    flex-direction: column;
 }

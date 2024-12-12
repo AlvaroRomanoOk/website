@@ -17,7 +17,7 @@
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -64,13 +64,13 @@
 
         <a href="contacto"></a>
 
-        <p>CONTÁCTAME</p>
+        <p id="section_title">CONTÁCTAME</p>
 
-        <form name="contact" method="POST" data-netlify="true" action="/pages/succes.html">
+        <form id="contact_form" name="contact" method="POST" data-netlify="true" action="/pages/succes.html">
 
-          <p class="contacto_text"><label>Nombre Completo: <input type="text" name="name" required /></label></p>
-          <p class="contacto_text"><label>Correo: <input type="email" name="email" required /></label></p>
-          <p class="text-area"><label>Mensaje: <textarea name="mensaje"></textarea></label></p>
+          <p class="contacto_text"><label>Nombre Completo<input placeholder="Nombre Completo" type="text" name="name" required /></label></p>
+          <p class="contacto_text"><label>Correo<input placeholder="Correo" type="email" name="email" required /></label></p>
+          <p class="contacto_text"><label>Mensaje<textarea placeholder="Mensaje" name="mensaje"></textarea></label></p>
           <p><button id="form_send" type="submit">Enviar</button></p>
 
         </form>
