@@ -15,7 +15,7 @@ Este repositorio contiene mi página web personal que actúa como portafolio en 
 
 La web aún se encuentra en una fase beta de su tercera versión, por lo que aún no es lógico plantear tantas características presentes y no presentes, puesto que la web está en proceso.
 
-- Se remodelo completamente la web.
+- Se remodeló completamente la web.
 - Se añadió un formulario de contacto.
 - Se eliminó, momentáneamente, el diseño responsive de la web.
 
