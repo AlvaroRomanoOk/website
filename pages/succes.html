@@ -1,11 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Envío Correcto!</title>
+    <title>Mensaje Enviado!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <style>
+        /* Estilos adicionales para la página de confirmación */
+        html {
+            user-select: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #F2F2F2F2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .confirmation-box {
+            text-align: center;
+            background-color: #1c1c1c;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .confirmation-box h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-box p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-box button {
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #000000;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .confirmation-box button:hover {
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="confirmation-box">
+        <h1>¡Gracias por tu mensaje!</h1>
+        <p>Tu formulario ha sido enviado exitosamente. Me pondré en contacto contigo pronto.</p>
+        <a href="../index.html">
+            <button>Volver al Inicio</button>
+        </a>
+    </div>
 </body>
 </html>
