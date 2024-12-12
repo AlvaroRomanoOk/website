@@ -134,17 +134,10 @@ header ul li:hover::after {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #252525;
+    background-color: #000000;
     align-items: center;
     justify-content: center;
-}
-
-#contacto p {
-    color: #FFFFFF;
-}
-
-#contacto label {
-    color: #FFFFFF;
+    padding: 0 20px;
 }
 
 header.hidden {
@@ -163,24 +156,66 @@ header:not(.hidden) {
 #section_title {
     font-size: 38px;
     font-weight: 700;
+    color: #F2F2F2;
+    margin-bottom: 20px;
 }
 
 #contact_form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-
-    background-color: red;
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
 }
 
 .contacto_text {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .contacto_text label {
-    display: flex;
-    flex-direction: column;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.contacto_text input,
+.contacto_text textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #252525;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.contacto_text input:focus,
+.contacto_text textarea:focus {
+    border-color: #F2F2F2;
+    outline: none;
+}
+
+#form_send {
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#form_send:hover {
+    background-color: #000000;
+    color: #FFFFFF;
 }
