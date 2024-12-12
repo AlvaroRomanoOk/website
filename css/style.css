@@ -134,6 +134,13 @@ header ul li:hover::after {
 
     /* SECCIÓN SERVICIOS */
 
+#servicios {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
     /* SECCIÓN CONTACTO */
 
 #contacto {
