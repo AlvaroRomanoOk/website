@@ -2,7 +2,7 @@
 > Página web - Repositorio oficial
 
 >[!NOTE]
-> Versión 2.1-beta - 25 de enero del 2024
+> Versión 3.0-beta - 12 de diciembre del 2024
 
 > [!TIP]
 > Esta documentación es siempre apta y refleja lo que viene siendo la última versión del proyecto.
@@ -10,6 +10,14 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fadee713-2ce4-454f-ace0-24925b1c9bd2/deploy-status)](https://app.netlify.com/sites/alvaroromano/deploys)
 
 Este repositorio contiene mi página web personal que actúa como portafolio en línea para mostrar mis proyectos, habilidades, etc.
+
+## Cambios de la última versión
+
+La web aún se encuentra en una fase beta de su tercera versión, por lo que aún no es lógico plantear tantas características presentes y no presentes, puesto que la web está en proceso.
+
+- Se remodeló completamente la web.
+- Se añadió un formulario de contacto.
+- Se eliminó, momentáneamente, el diseño responsive de la web.
 
 ## Tech Stack
 
@@ -19,25 +27,21 @@ Para este proyecto se utilizaron las siguientes tecnologías:
 - CSS
 - JavaScript
 
-## Features
+## Características
 
-- Diseño responsivo que se adapta a diferentes dispositivos y tamaños de pantalla.
+- Formulario de contacto para el envío de mensajes.
 
-## Process
+## Proceso de desarrollo
 
 Comencé este proyecto con un bosquejo básico de cómo quería que se viera la página. Luego, implementé el diseño utilizando HTML y CSS, centrándome en la creación de un diseño limpio y atractivo. La parte más desafiante fue y será agregar funcionalidades interactivas con JavaScript. Por ejemplo, la validación del formulario de contacto, las animaciones, los diferentes frameworks que necesite aplicar, etc..
 
 Al final, estoy satisfecho con el resultado y creo que esta página será una buena herramienta para presentarme a mi y a mi trabajo.
 
-## Learnings
+## Aprendizaje
 
 - Reforcé mis habilidades en diseño web y experiencia del usuario.
 
-## Improvement
-
-La web aún se encuentra en una fase beta de su segunda versión, por lo que aún no es lógico plantear tantas características presentes y no presentes, puesto que la web está en proceso.
-
-## Running the Project
+## Ejecutar del proyecto
 
 El código fuente de esta web es de total uso abierto, puedes clonarlo, mofificarlo parcial o totalmente, mejorarlo y proponerme cambios, etc.
 
