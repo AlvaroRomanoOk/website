@@ -1,0 +1,57 @@
+/* 1. BASE (Móviles - Desde 320px) */
+#inicio {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 4rem);
+    background-color: #252525;
+    padding: 3rem;
+    justify-content: center;
+    background-color: #1a1a1a;
+    background: radial-gradient(circle at center, #2a2a2a 0%, #1a1a1a 100%) !important;
+}
+
+h2 {
+    color: #f2f2f2;
+    font-family: "BJ Cree", serif;
+    font-size: clamp(2rem, 1.6rem + 1.25vw, 4rem);
+    margin: clamp(1rem, 0.8rem + 0.625vw, 2rem) 0;
+}
+
+p {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1rem, 0.8rem + 0.625vw, 2rem);
+    margin: 1rem 0;
+    line-height: 1.6; 
+}
+
+@media screen and (min-width: 768px) {
+    #inicio {
+        padding: 0 10%; 
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #inicio {
+        padding: 0 18%; 
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #inicio {
+        /* Tu diseño perfecto original */
+        padding: 0 25%;
+        height: calc(100vh - 3.33vw);
+    }
+
+    h2 {
+        font-size: 3.33vw;
+        margin: 1.66vw 0;
+    }
+
+    p {
+        font-size: 1.66vw;
+        margin: 0.83vw 0;
+    }
+}
