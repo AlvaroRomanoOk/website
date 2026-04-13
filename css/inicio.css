@@ -126,8 +126,6 @@
 
 
 
-
-
     #content-inicio-d-2 {
         display: grid;
         grid-template-columns: repeat(2, 300px);
@@ -176,4 +174,23 @@
         color: #fff;
     }
 
+}
+
+
+
+@media screen and (min-width:1920px) {
+
+    #content-inicio-d p span {
+        font-size: 10rem;
+    }
+
+    #content-inicio-d-2 {
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(2, 350px);
+        gap: 30px;
+    }
+
+    .inicio-sqr p {
+        font-size: 1.8rem;
+    }
 }
