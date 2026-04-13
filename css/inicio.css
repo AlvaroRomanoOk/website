@@ -1,3 +1,8 @@
+#content-inicio-d-1, 
+#content-inicio-d-2 {
+    display: none;
+}
+
 #content-inicio {
     display: flex;
     align-items: center;
