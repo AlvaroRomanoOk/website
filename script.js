@@ -1,3 +1,24 @@
+function cargarSeccion(url) {
+    fetch(url)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('content').innerHTML = html;
+            
+            // --- ESTO MEJORA EL SEO ---
+            // Cambia la URL en la barra del navegador sin recargar la página
+            const nombrePagina = url.split('/').pop().replace('.html', '');
+            window.history.pushState({path: nombrePagina}, '', nombrePagina);
+            
+            // Cambia el título de la pestaña para que Google sepa dónde está
+            document.title = "Alvaro Romano | " + nombrePagina.toUpperCase();
+        });
+}
+
+
+
+
+
+
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
