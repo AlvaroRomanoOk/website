@@ -18,7 +18,6 @@ function cargarSeccion(url) {
 
 
 
-
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
@@ -51,10 +50,6 @@ function cargarSeccion(archivo) {
 }
 
 window.onload = () => cargarSeccion('pages/inicio.html');
-
-
-
-
 
 
 
