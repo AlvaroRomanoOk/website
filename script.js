@@ -13,10 +13,12 @@ function cargarSeccion(url) {
 
             // SEO y limpieza de URL al cambiar de página
             const nombrePagina = url.split('/').pop().replace('.html', '');
+            
+            // Actualizamos el historial y el título
             window.history.pushState({path: nombrePagina}, '', nombrePagina);
             document.title = "Alvaro Romano | " + nombrePagina.toUpperCase();
             
-            // Forzar limpieza de cualquier ancla residual al cargar nueva sección
+            // Forzamos que la URL no tenga ningún # al cargar la nueva página 
             history.replaceState(null, document.title, window.location.pathname);
         })
         .catch(error => console.error(error));
@@ -27,8 +29,10 @@ const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 
-abrir.addEventListener("click", () => nav.classList.add("visible"));
-cerrar.addEventListener("click", () => nav.classList.remove("visible"));
+if (abrir && cerrar) {
+    abrir.addEventListener("click", () => nav.classList.add("visible"));
+    cerrar.addEventListener("click", () => nav.classList.remove("visible"));
+}
 
 // 3. LÓGICA DE SCROLL Y ELIMINACIÓN DE ANCLAS
 let isScrolling = false;
@@ -64,8 +68,7 @@ const handleUniversalScroll = (event) => {
             behavior: 'smooth'
         });
 
-        // --- AQUÍ VA LA LIMPIEZA DE LA URL ---
-        // Esto elimina el #fragmento mientras haces scroll
+        // Limpieza de la URL durante el scroll 
         history.replaceState(null, document.title, window.location.pathname + window.location.search);
 
         setTimeout(() => {
@@ -74,27 +77,38 @@ const handleUniversalScroll = (event) => {
     }
 };
 
-// Eventos iniciales
-window.onload = () => cargarSeccion('pages/inicio.html');
+// 4. EVENTOS INICIALES Y CARGA INTELIGENTE
+window.addEventListener('load', () => {
+    // Detectamos la URL actual para no cargar siempre "inicio" al refrescar
+    const path = window.location.pathname.replace('/', '');
+    
+    if (path === '' || path === 'index' || path === 'inicio') {
+        cargarSeccion('pages/inicio.html');
+    } else {
+        // Intenta cargar la página según la URL actual
+        cargarSeccion(`pages/${path}.html`);
+    }
+
+    // Limpieza de hash si el usuario entró con un enlace directo con # 
+    if (window.location.hash) {
+        setTimeout(() => {
+            history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }, 10);
+    }
+});
+
 window.addEventListener('wheel', handleUniversalScroll, { passive: false });
 
-
-
-
-
-
-
-
-// 1. INTERCEPTAR CLICS EN EL MENÚ PARA EVITAR EL # EN LA URL
+// 5. INTERCEPTAR CLICS EN EL MENÚ (Para evitar que aparezca el # momentáneamente)
 document.addEventListener('click', (e) => {
-    // Verificamos si lo que se clicó es un enlace que apunta a un ancla (empieza por #)
     const link = e.target.closest('a');
-    if (link && link.getAttribute('href').startsWith('#')) {
-        e.preventDefault(); // Detiene el comportamiento por defecto (no añade el # a la URL)
+    if (link && link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
+        const targetId = link.getAttribute('href').slice(1);
+        if (!targetId) return; // Si es solo "#", no hacemos nada
 
-        const targetId = link.getAttribute('href').slice(1); // Quitamos el '#'
+        e.preventDefault(); 
+
         const targetElement = document.getElementById(targetId);
-
         if (targetElement) {
             const headerHeight = 96;
             window.scrollTo({
@@ -102,18 +116,8 @@ document.addEventListener('click', (e) => {
                 behavior: 'smooth'
             });
 
-            // Limpiamos la URL por si acaso, asegurándonos de que no haya #
+            // Borramos el rastro del # en la URL inmediatamente 
             history.replaceState(null, document.title, window.location.pathname + window.location.search);
         }
-    }
-});
-
-// 2. ASEGURAR LIMPIEZA AL CARGAR LA PÁGINA (por si entran con link directo)
-window.addEventListener('load', () => {
-    if (window.location.hash) {
-        // Esperamos un instante y borramos el hash de la barra
-        setTimeout(() => {
-            history.replaceState(null, document.title, window.location.pathname + window.location.search);
-        }, 10);
     }
 });
