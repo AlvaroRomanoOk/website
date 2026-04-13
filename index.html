@@ -4,61 +4,55 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Alvaro Romano</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BJ+Cree:wght@400;500;600;700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sekuya&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/inicio.css">
 
 </head>
-
 <body>
-
-    <div id="content">
+    
+    <div id="container">
 
         <header>
 
-            <h1>ALVARO ROMANO</h1>
+            <h1 aria-label="Alvaro Romano">
+                <span aria-hidden="true" class="h1-logo">A</span>
+            </h1>
 
             <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+
             <nav class="nav" id="nav">
                 <ul>
+                    
                     <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
-                    <li><a href="">INICIO</a></li>
-                    <li><a href="index.html">DESARROLLO WEB</a></li>
-                    <li><a href="index.html">EDICIÓN AUDIOVISUAL</a></li>
-                    <li><a href="index.html">PORTFOLIO</a></li>
+
+                    <li><a href="#" onclick="cargarSeccion('pages/inicio.html'); return false;">INICIO</a></li>
+                    <li><a href="#" >DESARROLLO WEB</a></li>
+                    <li><a href="#">EDICIÓN AUDIOVISUAL</a></li>
+                    <li><a href="#">PORTAFOLIO</a></li>
+                    <!-- <li><a href="#" onclick="cargarSeccion('pages/contacto.html'); return false;">CONTACTO</a></li> -->
                     <li><a href="https://www.instagram.com/AlvaroRomanoOk">CONTACTO</a></li>
-                    <!-- pages/contacto.html -->
+
                 </ul>
             </nav>
 
         </header>
 
-        <section id="inicio">
-
-            <h2>Haremos tus ideas realidad!</h2>
-
-            <p>
-                Soy un creador enfocado en transformar conceptos en experiencias digitales. 
-                Especializado en <strong style="color: oklch(70.4% .191 22.216);">desarrollo web</strong> y <strong style="color: oklch(70.4% .191 22.216);">edición audiovisual</strong>, 
-                combino técnica y creatividad para potenciar tu presencia online y dar vida 
-                a tus proyectos con resultados de alto impacto.
-            </p>
-
-        </section>
+        <main id="content">
+            <p>CARGANDO</p>
+        </main>
 
     </div>
-    
-     <script src="script.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
-
 </html>

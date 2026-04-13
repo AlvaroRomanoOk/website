@@ -1,0 +1,204 @@
+@font-face {
+    font-family: 'Anurati';
+    src: url('../fonts/Anurati-Regular.otf') format('truetype'); /* Ruta al archivo */
+    font-weight: normal;
+    font-style: normal;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a:focus, 
+button:focus {
+    outline: none;
+}
+
+#container {
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    background-color: transparent;
+    position: sticky;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    height: 96px;
+}
+
+h1 {
+    font-family: 'Anurati', sans-serif;
+    font-size: 2.4rem;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+.abrir-menu {
+    font-size: 1.4rem;
+    color: #FFF;
+}
+
+.nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+    background-color: #fff;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.nav.visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.cerrar-menu {
+    color: #000;
+    width: 100%;
+    padding: .5rem 0;
+    font-size: 1.8rem;
+}
+
+.nav ul {
+    width: 100%;
+}
+
+.nav ul li {
+    padding: .5rem 0;
+    width: 100%;
+    display: flex;
+}
+
+.nav ul a {
+    width: 100%;
+    color: #000;
+    font-family: "Arimo", sans-serif;
+    font-size: 1.4rem;
+    padding: 1.5rem 0;
+}
+
+@media screen and (min-width:768px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: none;
+    }
+
+    .nav {
+        all: unset;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav ul {
+        all: unset;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .nav ul li {
+        all: unset;
+        display: block;
+    }
+
+    .nav ul li a {
+        all: unset;
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-size: .8rem;
+        position: relative;
+        transition: opacity 0.3s;
+        cursor: pointer;
+    }
+
+    .nav ul li a:hover {
+        opacity: 0.7;
+    }
+}
+
+@media screen and (min-width:840px) {
+    .nav ul li a {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width:960px) {
+    .nav ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nav ul {
+        gap: 3rem;
+    }
+    .nav ul li a {
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .nav ul {
+        gap: 4rem;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    header {
+        padding: 0 10%;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    header {
+        height: 120px;
+        padding: 0 15%;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+}
