@@ -77,3 +77,43 @@ const handleUniversalScroll = (event) => {
 // Eventos iniciales
 window.onload = () => cargarSeccion('pages/inicio.html');
 window.addEventListener('wheel', handleUniversalScroll, { passive: false });
+
+
+
+
+
+
+
+
+// 1. INTERCEPTAR CLICS EN EL MENÚ PARA EVITAR EL # EN LA URL
+document.addEventListener('click', (e) => {
+    // Verificamos si lo que se clicó es un enlace que apunta a un ancla (empieza por #)
+    const link = e.target.closest('a');
+    if (link && link.getAttribute('href').startsWith('#')) {
+        e.preventDefault(); // Detiene el comportamiento por defecto (no añade el # a la URL)
+
+        const targetId = link.getAttribute('href').slice(1); // Quitamos el '#'
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            const headerHeight = 96;
+            window.scrollTo({
+                top: targetElement.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+
+            // Limpiamos la URL por si acaso, asegurándonos de que no haya #
+            history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }
+    }
+});
+
+// 2. ASEGURAR LIMPIEZA AL CARGAR LA PÁGINA (por si entran con link directo)
+window.addEventListener('load', () => {
+    if (window.location.hash) {
+        // Esperamos un instante y borramos el hash de la barra
+        setTimeout(() => {
+            history.replaceState(null, document.title, window.location.pathname + window.location.search);
+        }, 10);
+    }
+});
