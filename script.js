@@ -11,14 +11,13 @@ function cargarSeccion(url) {
         .then(html => {
             document.getElementById('content').innerHTML = html;
 
-            // SEO y limpieza de URL al cambiar de página
             const nombrePagina = url.split('/').pop().replace('.html', '');
             
             // Actualizamos el historial y el título
             window.history.pushState({path: nombrePagina}, '', nombrePagina);
             document.title = "Alvaro Romano | " + nombrePagina.toUpperCase();
             
-            // Forzamos que la URL no tenga ningún # al cargar la nueva página 
+            // Forzamos que la URL no tenga ningún #
             history.replaceState(null, document.title, window.location.pathname);
         })
         .catch(error => console.error(error));
@@ -68,7 +67,6 @@ const handleUniversalScroll = (event) => {
             behavior: 'smooth'
         });
 
-        // Limpieza de la URL durante el scroll 
         history.replaceState(null, document.title, window.location.pathname + window.location.search);
 
         setTimeout(() => {
@@ -77,34 +75,34 @@ const handleUniversalScroll = (event) => {
     }
 };
 
-// 4. EVENTOS INICIALES Y CARGA INTELIGENTE
+// 4. EVENTOS INICIALES Y CARGA INTELIGENTE (EL AJUSTE NUEVO)
 window.addEventListener('load', () => {
-    // Detectamos la URL actual para no cargar siempre "inicio" al refrescar
-    const path = window.location.pathname.replace('/', '');
+    // Obtenemos la última parte de la URL de forma segura
+    let path = window.location.pathname.split('/').filter(p => p !== "").pop();
     
-    if (path === '' || path === 'index' || path === 'inicio') {
+    // Si la ruta está vacía o es index, cargar inicio.html
+    if (!path || path === 'index') {
         cargarSeccion('pages/inicio.html');
     } else {
-        // Intenta cargar la página según la URL actual
+        // Carga la página correspondiente (inicio, contacto, etc.)
         cargarSeccion(`pages/${path}.html`);
     }
 
-    // Limpieza de hash si el usuario entró con un enlace directo con # 
     if (window.location.hash) {
         setTimeout(() => {
-            history.replaceState(null, document.title, window.location.pathname + window.location.search);
+            history.replaceState(null, document.title, window.location.pathname);
         }, 10);
     }
 });
 
 window.addEventListener('wheel', handleUniversalScroll, { passive: false });
 
-// 5. INTERCEPTAR CLICS EN EL MENÚ (Para evitar que aparezca el # momentáneamente)
+// 5. INTERCEPTAR CLICS EN EL MENÚ
 document.addEventListener('click', (e) => {
     const link = e.target.closest('a');
     if (link && link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
         const targetId = link.getAttribute('href').slice(1);
-        if (!targetId) return; // Si es solo "#", no hacemos nada
+        if (!targetId) return;
 
         e.preventDefault(); 
 
@@ -116,7 +114,6 @@ document.addEventListener('click', (e) => {
                 behavior: 'smooth'
             });
 
-            // Borramos el rastro del # en la URL inmediatamente 
             history.replaceState(null, document.title, window.location.pathname + window.location.search);
         }
     }
